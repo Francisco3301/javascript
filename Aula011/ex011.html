@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 90vw;
+            height: 90vh;
+            background-color: gray;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        main{
+            padding: 20px;
+            width: 500px;
+            height: 500px;
+            background-color: white;
+            color: black;
+        }
+        main > h1{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        
+            <h1>Sistema de nacionalidade</h1>
+            <label for="txtn1">País:</label>
+            <input class="x" type="text" name="txtn1" id="txtn1" placeholder="Coloque seu páis"><br>
+            <input type="button" value="Concluir" onclick="concluir()">
+            <div id="ress">
+            </div>
+        
+    </main>
+    
+
+    <script>
+        function concluir(){
+        var txtn2 = window.document.getElementById('txtn1')
+        var pais = String(txtn2.value)
+        var res = window.document.getElementById('ress')
+            if (pais != 'Brasil'){
+                res.innerHTML = `<p>Seu pais é <strong>${pais}</strong> você é estrangeiro</p>` 
+            }else{
+                res.innerHTML = `<p>Seu país é <strong>${pais}</strong> você é brasileiro</p>` 
+            }
+        }
+    </script>
+</body>
+</html>

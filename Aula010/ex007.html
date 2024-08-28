@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Dom</title>
+    <style>
+
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+            width: 90vw;
+            height: 90vh;
+            background-color: gray;
+        }
+
+        main{
+            width: 500px;
+            height: 500px;
+            background-color: white;
+            padding: 10px;
+        }
+
+        main > h1{
+            text-align: center;
+        }
+
+        div#res{
+            background-color: rgba(255, 0, 0, 0.336);
+            margin-top: 10px;
+            width: 200px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Somandos valores</h1>
+        <input type="number" name="textn1" id="textn1"> +
+        <input type="number" name="textn2" id="textn2">
+        <input type="button" value="Somar" onclick="somar()">
+        <div id="res">Resultado</div>
+        
+    </main>
+    <script>
+        function somar(){
+        var tn1 = window.document.getElementById('textn1')
+        var tn2 = window.document.getElementById('textn2')
+        var res = window.document.getElementById('res')
+        var n1 = Number(tn1.value)
+        var n2 = Number(tn2.value)
+        var s = n1 + n2
+        res.innerHTML = `A soma entre ${n1} e ${n2} é ingual a <strong>${s}</strong>`
+    }
+    </script>
+</body>
+</html>
